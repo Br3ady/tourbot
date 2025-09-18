@@ -11,10 +11,28 @@ logger = logging.getLogger(__name__)
 
 app = Flask(__name__)
 
-# Initialize Anthropic client
-client = anthropic.Anthropic(
-    api_key=os.getenv('ANTHROPIC_API_KEY')
-)
+# Initialize Anthropic client with lazy loading
+client = None
+
+def get_anthropic_client():
+    """Create Anthropic client with lazy loading and error handling"""
+    global client
+    if client is not None:
+        return client
+        
+    api_key = os.getenv('ANTHROPIC_API_KEY')
+    if not api_key:
+        logger.warning("ANTHROPIC_API_KEY not found")
+        return None
+    
+    try:
+        # Simple initialization that should work in most environments
+        client = anthropic.Anthropic(api_key=api_key)
+        logger.info("Anthropic client initialized successfully")
+        return client
+    except Exception as e:
+        logger.error(f"Failed to initialize Anthropic client: {e}")
+        return None
 
 @app.route('/')
 def index():
@@ -61,15 +79,21 @@ def chat():
         # Log the user message
         logger.info(f"User message: {user_message}")
         
-        # Check if API key is configured
-        if not os.getenv('ANTHROPIC_API_KEY'):
-            return jsonify({
-                'response': 'Error: ANTHROPIC_API_KEY environment variable not set. Please configure your Claude API key.'
-            }), 200
+        # Get Anthropic client
+        current_client = get_anthropic_client()
+        if not current_client:
+            if not os.getenv('ANTHROPIC_API_KEY'):
+                return jsonify({
+                    'response': 'Error: ANTHROPIC_API_KEY environment variable not set. Please configure your Claude API key.'
+                }), 200
+            else:
+                return jsonify({
+                    'response': 'Error: Failed to initialize Anthropic client. Please check your API key and try again.'
+                }), 200
         
         # Send message to Claude
         try:
-            message = client.messages.create(
+            message = current_client.messages.create(
                 model=MODEL_NAME,
                 max_tokens=MAX_TOKENS,
                 temperature=TEMPERATURE,

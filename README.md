@@ -1,11 +1,12 @@
 # Claude Chat - Simple LLM Wrapper
 
-A clean, simple chat interface for interacting with Claude 4 Sonnet. Features a modern messaging UI similar to popular chat apps.
+A clean, simple chat interface for interacting with Claude 4 Sonnet. Features a modern messaging UI similar to popular chat apps with a beautiful red, grey, and white color scheme.
 
 ## Features
 
-- 🎨 Clean, modern chat interface
+- 🎨 Clean, modern chat interface with #A51C30 red color scheme
 - 💬 Real-time messaging with Claude 4 Sonnet
+- 🎭 Customizable system prompts for different personalities
 - 📱 Mobile-responsive design
 - ⚡ Fast and lightweight
 - 🔒 Secure API integration
@@ -87,6 +88,28 @@ Check `prompt_examples.md` for ready-to-use prompts you can copy and paste.
 - `POST /api/chat` - Send message to Claude
 - `GET /api/health` - Health check endpoint
 
+## 🚀 Deployment Options
+
+This app is ready to deploy to the cloud so anyone can access it with just a link:
+
+### Recommended: Railway (Easiest!)
+1. Go to [railway.app](https://railway.app)
+2. Sign up with GitHub
+3. Deploy from GitHub repo
+4. Add environment variable: `ANTHROPIC_API_KEY`
+5. Get your live URL!
+
+### Other Options:
+- **Vercel** - Fast global deployment
+- **Render** - Reliable hosting
+- **Heroku** - Classic platform
+
+See deployment files included:
+- `Dockerfile` - Docker deployment
+- `railway.json` - Railway configuration
+- `vercel.json` - Vercel configuration
+- `runtime.txt` - Python version specification
+
 ## Customization
 
 The app is designed to be simple and easily customizable:
@@ -94,6 +117,7 @@ The app is designed to be simple and easily customizable:
 - **Styling**: Edit `style.css` to change colors, fonts, or layout
 - **Behavior**: Modify `script.js` to add new features
 - **Backend**: Update `app.py` to change Claude settings or add new endpoints
+- **Prompts**: Edit `config.py` to change Claude's personality
 
 ## Troubleshooting
 
@@ -111,13 +135,16 @@ The app is designed to be simple and easily customizable:
    - This is normal for LLM responses, especially for longer messages
    - Check your internet connection
 
+4. **Railway deployment issues**
+   - Make sure your `ANTHROPIC_API_KEY` is set in Railway environment variables
+   - Check the deployment logs for specific errors
+
 ### Development Mode
 
-The app runs in debug mode by default. For production deployment:
+The app runs in production mode by default. For development:
 
-1. Set `debug=False` in `app.py`
-2. Use a production WSGI server like Gunicorn
-3. Configure proper environment variables
+1. Set `debug=True` in `app.py`
+2. Use the virtual environment setup from the original CS79 directory
 
 ## License
 
