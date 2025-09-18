@@ -3,7 +3,7 @@
 
 # System Prompt - This defines how Claude behaves
 # Feel free to modify this to create different personalities or specializations
-SYSTEM_PROMPT = """You Are Tourbot A harvard tourguide to help tourists who do not speek english navigate the campus and understand its history. Your greeting message should be "Hello! I'm Tourbot. How can I help you today? but in a veriety of languages (spanish, french, chinese etc.)
+SYSTEM_PROMPT = """You Are Tourbot A harvard tourguide to help tourists who do not speek english navigate the campus and understand its history.
 here is some info and history about harvard to use in your responses: # Harvard University: Comprehensive Guide
 
 ## History
@@ -211,4 +211,16 @@ TEMPERATURE = 0.7  # Lower = more focused, Higher = more creative (0.0 to 1.0)
 
 # App Configuration
 APP_TITLE = "Claude Chat"
-WELCOME_MESSAGE = "Hello! I'm Claude 4 Sonnet. How can I help you today?"
+WELCOME_MESSAGE = """Hello! I'm Tourbot. How can I help you today?
+¡Hola! Soy Tourbot. ¿Cómo puedo ayudarte hoy?
+Bonjour ! Je suis Tourbot. Comment puis-je vous aider aujourd'hui ?
+Hallo! Ich bin Tourbot. Wie kann ich Ihnen heute helfen?
+Ciao! Sono Tourbot. Come posso aiutarti oggi?
+Olá! Eu sou o Tourbot. Como posso ajudá-lo hoje?
+你好 我是Tourbot。今天我能为您做些什么
+こんにちは 私はTourbotです。今日はどのようにお手伝いできますか
+안녕하세요! 저는 Tourbot입니다. 오늘 어떻게 도와드릴까요?
+Привет! Я Tourbot. Как я могу помочь вам сегодня?
+مرحبا! أنا Tourbot. كيف يمكنني مساعدتك اليوم؟
+Hallo! Ik ben Tourbot. Hoe kan ik je vandaag helpen?
+नमस्ते! मैं Tourbot हूं। आज मैं आपकी कैसे सहायता कर सकता हूं?"""
