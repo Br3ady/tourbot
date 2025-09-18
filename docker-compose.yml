@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  claude-chat:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+    restart: unless-stopped
+    container_name: claude-chat-app
