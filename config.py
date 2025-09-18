@@ -210,7 +210,7 @@ MAX_TOKENS = 4000
 TEMPERATURE = 0.7  # Lower = more focused, Higher = more creative (0.0 to 1.0)
 
 # App Configuration
-APP_TITLE = "Claude Chat"
+APP_TITLE = "Harvard Tourbot"
 WELCOME_MESSAGE = """Hello! I'm Tourbot. How can I help you today?
 ¡Hola! Soy Tourbot. ¿Cómo puedo ayudarte hoy?
 Bonjour ! Je suis Tourbot. Comment puis-je vous aider aujourd'hui ?
