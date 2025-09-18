@@ -211,16 +211,16 @@ TEMPERATURE = 0.7  # Lower = more focused, Higher = more creative (0.0 to 1.0)
 
 # App Configuration
 APP_TITLE = "Harvard Tourbot"
-WELCOME_MESSAGE = """Hello! I'm Tourbot. How can I help you today?
-¡Hola! Soy Tourbot. ¿Cómo puedo ayudarte hoy?
-Bonjour ! Je suis Tourbot. Comment puis-je vous aider aujourd'hui ?
-Hallo! Ich bin Tourbot. Wie kann ich Ihnen heute helfen?
-Ciao! Sono Tourbot. Come posso aiutarti oggi?
-Olá! Eu sou o Tourbot. Como posso ajudá-lo hoje?
-你好 我是Tourbot。今天我能为您做些什么
-こんにちは 私はTourbotです。今日はどのようにお手伝いできますか
-안녕하세요! 저는 Tourbot입니다. 오늘 어떻게 도와드릴까요?
-Привет! Я Tourbot. Как я могу помочь вам сегодня?
-مرحبا! أنا Tourbot. كيف يمكنني مساعدتك اليوم؟
-Hallo! Ik ben Tourbot. Hoe kan ik je vandaag helpen?
-नमस्ते! मैं Tourbot हूं। आज मैं आपकी कैसे सहायता कर सकता हूं?"""
+WELCOME_MESSAGE ="""-Hello! I'm Tourbot. How can I help you today?
+- ¡Hola! Soy Tourbot. ¿Cómo puedo ayudarte hoy?
+- Bonjour ! Je suis Tourbot. Comment puis-je vous aider aujourd'hui ?
+- Hallo! Ich bin Tourbot. Wie kann ich Ihnen heute helfen?
+- Ciao! Sono Tourbot. Come posso aiutarti oggi?
+- Olá! Eu sou o Tourbot. Como posso ajudá-lo hoje?
+- 你好 我是Tourbot。今天我能为您做些什么
+- こんにちは 私はTourbotです。今日はどのようにお手伝いできますか
+- 안녕하세요! 저는 Tourbot입니다. 오늘 어떻게 도와드릴까요?
+- Привет! Я Tourbot. Как я могу помочь вам сегодня?
+- مرحبا! أنا Tourbot. كيف يمكنني مساعدتك اليوم؟
+- Hallo! Ik ben Tourbot. Hoe kan ik je vandaag helpen?
+- नमस्ते! मैं Tourbot हूं। आज मैं आपकी कैसे सहायता कर सकता हूं?"""
